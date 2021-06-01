@@ -1,0 +1,75 @@
+using System;
+using System.Collections;
+
+namespace Example2 {
+class SemesterDetails {
+	double cgpa=0.00;
+  double b=0.00;
+   static double semester_cgpa=0.00;
+	
+ int semesternumber;
+ SemesterDetails()
+ {
+
+ }
+ SemesterDetails(int n)
+ {
+   semesternumber = n;
+ }
+
+ 
+ 		public void ListOfSubjects(params object[] array)
+		{
+			for (int i = 0; i < array.Length; i++)
+			{
+				
+			
+				Console.WriteLine(array[i]);
+			}	
+		}
+    public void GPACalculator(params object[] array1)
+		{
+			for (int i = 0; i < array1.Length; i++)
+			{
+			//	b=ToDouble(array1[i]);
+       
+        //float. Parse(str1);
+			cgpa = cgpa + Convert.ToDouble(array1[i]);
+				// Console.WriteLine(array1[i]);
+        
+			}	
+
+     semester_cgpa = (cgpa/array1.Length) ;
+     //Console.WriteLine("current semester cgpa is {0}", semester_cgpa);
+      
+		}
+
+
+  public void  showInfo()
+  {
+
+Console.WriteLine("current semester cgpa is {0}", semester_cgpa);
+Console.WriteLine("current semester Number  {0}", semesternumber);
+
+  }
+
+	// Driver Code
+	static void Main(string[] args)
+	{
+	SemesterDetails one = new SemesterDetails(1);
+  Console.WriteLine();
+		Console.WriteLine("current semester subjects : ");
+		// Variable length arguments
+
+		one.ListOfSubjects("bangla", "english",
+				"law",
+						"social science ", "c++");
+Console.WriteLine();
+            one.GPACalculator("1.00","2.3","4","4","3.9");
+
+one.showInfo();
+            //	Geeks a = new Geeks();
+	}
+
+}
+}
