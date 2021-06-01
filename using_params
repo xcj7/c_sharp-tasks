@@ -73,3 +73,77 @@ one.showInfo();
 
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// using System;
+
+// namespace SemisterDetails
+// {
+//     class SemesterDetails
+//     {
+//         private int semesterNumber;
+//         private float GPA;
+//         static int s;
+//         static float sum = 0.0f;
+
+//         public void setSemesterNumber(int semesterNumber)
+//         {
+//             this.semesterNumber = semesterNumber;
+//         }
+//         public void setGPA(params float[] GPA)
+//         {
+ 
+//             for (int i = 0; i < GPA.Length; i++)
+//             {
+//                 sum = sum + Convert.ToSingle(GPA[i]);
+//             }
+//         }
+//         public void GPACalculator()
+//         {
+//             GPA= sum/s;
+//             Console.WriteLine("GPA = " + GPA);
+//         }
+//         public void ListOfSubjects(params String [] list)
+//         {
+//             s = list.Length;
+//             for (int i = 0; i < list.Length; i++)
+//             {
+//                 Console.WriteLine(i+1+") "+list[i]);
+//             }
+//             Console.WriteLine();
+//         }
+//         public void ShowInfo()
+//         {
+//             Console.WriteLine("Semester Number = " + semesterNumber);
+//             Console.WriteLine("GPA = " + GPA);
+//             Console.WriteLine();
+//         }
+//         static void Main(string[] args)
+//         {
+//             SemesterDetails s1 = new SemesterDetails();
+//             s1.ListOfSubjects("java","algo","math5","c#" );
+//             s1.setSemesterNumber(4);
+//             s1.setGPA(3.66f, 3.88f,3.60f,4.00f);
+//             s1.GPACalculator();
+//             s1.ShowInfo();
+//             Console.ReadKey();
+//         }
+//     }
+// }
